@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA23C6D8159B91FA009A4BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA23C6D7159B91FA009A4BB6 /* Cocoa.framework */; };
+		DA23C6E2159B91FA009A4BB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA23C6E0159B91FA009A4BB6 /* InfoPlist.strings */; };
+		DA23C6E4159B91FA009A4BB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23C6E3159B91FA009A4BB6 /* main.m */; };
+		DA23C6E8159B91FA009A4BB6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DA23C6E6159B91FA009A4BB6 /* Credits.rtf */; };
+		DA23C6EB159B91FA009A4BB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23C6EA159B91FA009A4BB6 /* AppDelegate.m */; };
+		DA23C6EE159B91FB009A4BB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA23C6EC159B91FB009A4BB6 /* MainMenu.xib */; };
+		DA23C6F6159B91FB009A4BB6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA23C6F5159B91FB009A4BB6 /* SenTestingKit.framework */; };
+		DA23C6F7159B91FB009A4BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA23C6D7159B91FA009A4BB6 /* Cocoa.framework */; };
+		DA23C6FF159B91FB009A4BB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA23C6FD159B91FB009A4BB6 /* InfoPlist.strings */; };
+		DA23C702159B91FB009A4BB6 /* SubtitleCorrectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23C701159B91FB009A4BB6 /* SubtitleCorrectorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA23C6F8159B91FB009A4BB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA23C6CA159B91FA009A4BB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA23C6D2159B91FA009A4BB6;
+			remoteInfo = SubtitleCorrector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA23C6D3159B91FA009A4BB6 /* SubtitleCorrector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubtitleCorrector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA23C6D7159B91FA009A4BB6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA23C6DA159B91FA009A4BB6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA23C6DB159B91FA009A4BB6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA23C6DC159B91FA009A4BB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA23C6DF159B91FA009A4BB6 /* SubtitleCorrector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SubtitleCorrector-Info.plist"; sourceTree = "<group>"; };
+		DA23C6E1159B91FA009A4BB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA23C6E3159B91FA009A4BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA23C6E5159B91FA009A4BB6 /* SubtitleCorrector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubtitleCorrector-Prefix.pch"; sourceTree = "<group>"; };
+		DA23C6E7159B91FA009A4BB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DA23C6E9159B91FA009A4BB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA23C6EA159B91FA009A4BB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA23C6ED159B91FB009A4BB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DA23C6F4159B91FB009A4BB6 /* SubtitleCorrectorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitleCorrectorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA23C6F5159B91FB009A4BB6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA23C6FC159B91FB009A4BB6 /* SubtitleCorrectorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SubtitleCorrectorTests-Info.plist"; sourceTree = "<group>"; };
+		DA23C6FE159B91FB009A4BB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA23C700159B91FB009A4BB6 /* SubtitleCorrectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubtitleCorrectorTests.h; sourceTree = "<group>"; };
+		DA23C701159B91FB009A4BB6 /* SubtitleCorrectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubtitleCorrectorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA23C6D0159B91FA009A4BB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C6D8159B91FA009A4BB6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA23C6F0159B91FB009A4BB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C6F6159B91FB009A4BB6 /* SenTestingKit.framework in Frameworks */,
+				DA23C6F7159B91FB009A4BB6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA23C6C8159B91FA009A4BB6 = {
+			isa = PBXGroup;
+			children = (
+				DA23C6DD159B91FA009A4BB6 /* SubtitleCorrector */,
+				DA23C6FA159B91FB009A4BB6 /* SubtitleCorrectorTests */,
+				DA23C6D6159B91FA009A4BB6 /* Frameworks */,
+				DA23C6D4159B91FA009A4BB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA23C6D4159B91FA009A4BB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6D3159B91FA009A4BB6 /* SubtitleCorrector.app */,
+				DA23C6F4159B91FB009A4BB6 /* SubtitleCorrectorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA23C6D6159B91FA009A4BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6D7159B91FA009A4BB6 /* Cocoa.framework */,
+				DA23C6F5159B91FB009A4BB6 /* SenTestingKit.framework */,
+				DA23C6D9159B91FA009A4BB6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA23C6D9159B91FA009A4BB6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6DA159B91FA009A4BB6 /* AppKit.framework */,
+				DA23C6DB159B91FA009A4BB6 /* CoreData.framework */,
+				DA23C6DC159B91FA009A4BB6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA23C6DD159B91FA009A4BB6 /* SubtitleCorrector */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6E9159B91FA009A4BB6 /* AppDelegate.h */,
+				DA23C6EA159B91FA009A4BB6 /* AppDelegate.m */,
+				DA23C6EC159B91FB009A4BB6 /* MainMenu.xib */,
+				DA23C6DE159B91FA009A4BB6 /* Supporting Files */,
+			);
+			path = SubtitleCorrector;
+			sourceTree = "<group>";
+		};
+		DA23C6DE159B91FA009A4BB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6DF159B91FA009A4BB6 /* SubtitleCorrector-Info.plist */,
+				DA23C6E0159B91FA009A4BB6 /* InfoPlist.strings */,
+				DA23C6E3159B91FA009A4BB6 /* main.m */,
+				DA23C6E5159B91FA009A4BB6 /* SubtitleCorrector-Prefix.pch */,
+				DA23C6E6159B91FA009A4BB6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA23C6FA159B91FB009A4BB6 /* SubtitleCorrectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C700159B91FB009A4BB6 /* SubtitleCorrectorTests.h */,
+				DA23C701159B91FB009A4BB6 /* SubtitleCorrectorTests.m */,
+				DA23C6FB159B91FB009A4BB6 /* Supporting Files */,
+			);
+			path = SubtitleCorrectorTests;
+			sourceTree = "<group>";
+		};
+		DA23C6FB159B91FB009A4BB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA23C6FC159B91FB009A4BB6 /* SubtitleCorrectorTests-Info.plist */,
+				DA23C6FD159B91FB009A4BB6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA23C6D2159B91FA009A4BB6 /* SubtitleCorrector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA23C705159B91FB009A4BB6 /* Build configuration list for PBXNativeTarget "SubtitleCorrector" */;
+			buildPhases = (
+				DA23C6CF159B91FA009A4BB6 /* Sources */,
+				DA23C6D0159B91FA009A4BB6 /* Frameworks */,
+				DA23C6D1159B91FA009A4BB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SubtitleCorrector;
+			productName = SubtitleCorrector;
+			productReference = DA23C6D3159B91FA009A4BB6 /* SubtitleCorrector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA23C6F3159B91FB009A4BB6 /* SubtitleCorrectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA23C708159B91FB009A4BB6 /* Build configuration list for PBXNativeTarget "SubtitleCorrectorTests" */;
+			buildPhases = (
+				DA23C6EF159B91FB009A4BB6 /* Sources */,
+				DA23C6F0159B91FB009A4BB6 /* Frameworks */,
+				DA23C6F1159B91FB009A4BB6 /* Resources */,
+				DA23C6F2159B91FB009A4BB6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA23C6F9159B91FB009A4BB6 /* PBXTargetDependency */,
+			);
+			name = SubtitleCorrectorTests;
+			productName = SubtitleCorrectorTests;
+			productReference = DA23C6F4159B91FB009A4BB6 /* SubtitleCorrectorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA23C6CA159B91FA009A4BB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = FEUP;
+			};
+			buildConfigurationList = DA23C6CD159B91FA009A4BB6 /* Build configuration list for PBXProject "SubtitleCorrector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA23C6C8159B91FA009A4BB6;
+			productRefGroup = DA23C6D4159B91FA009A4BB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA23C6D2159B91FA009A4BB6 /* SubtitleCorrector */,
+				DA23C6F3159B91FB009A4BB6 /* SubtitleCorrectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA23C6D1159B91FA009A4BB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C6E2159B91FA009A4BB6 /* InfoPlist.strings in Resources */,
+				DA23C6E8159B91FA009A4BB6 /* Credits.rtf in Resources */,
+				DA23C6EE159B91FB009A4BB6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA23C6F1159B91FB009A4BB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C6FF159B91FB009A4BB6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA23C6F2159B91FB009A4BB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA23C6CF159B91FA009A4BB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C6E4159B91FA009A4BB6 /* main.m in Sources */,
+				DA23C6EB159B91FA009A4BB6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA23C6EF159B91FB009A4BB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA23C702159B91FB009A4BB6 /* SubtitleCorrectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA23C6F9159B91FB009A4BB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA23C6D2159B91FA009A4BB6 /* SubtitleCorrector */;
+			targetProxy = DA23C6F8159B91FB009A4BB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA23C6E0159B91FA009A4BB6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA23C6E1159B91FA009A4BB6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA23C6E6159B91FA009A4BB6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA23C6E7159B91FA009A4BB6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DA23C6EC159B91FB009A4BB6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA23C6ED159B91FB009A4BB6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DA23C6FD159B91FB009A4BB6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA23C6FE159B91FB009A4BB6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA23C703159B91FB009A4BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA23C704159B91FB009A4BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA23C706159B91FB009A4BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubtitleCorrector/SubtitleCorrector-Prefix.pch";
+				INFOPLIST_FILE = "SubtitleCorrector/SubtitleCorrector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA23C707159B91FB009A4BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubtitleCorrector/SubtitleCorrector-Prefix.pch";
+				INFOPLIST_FILE = "SubtitleCorrector/SubtitleCorrector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA23C709159B91FB009A4BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SubtitleCorrector.app/Contents/MacOS/SubtitleCorrector";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubtitleCorrector/SubtitleCorrector-Prefix.pch";
+				INFOPLIST_FILE = "SubtitleCorrectorTests/SubtitleCorrectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA23C70A159B91FB009A4BB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SubtitleCorrector.app/Contents/MacOS/SubtitleCorrector";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubtitleCorrector/SubtitleCorrector-Prefix.pch";
+				INFOPLIST_FILE = "SubtitleCorrectorTests/SubtitleCorrectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA23C6CD159B91FA009A4BB6 /* Build configuration list for PBXProject "SubtitleCorrector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA23C703159B91FB009A4BB6 /* Debug */,
+				DA23C704159B91FB009A4BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA23C705159B91FB009A4BB6 /* Build configuration list for PBXNativeTarget "SubtitleCorrector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA23C706159B91FB009A4BB6 /* Debug */,
+				DA23C707159B91FB009A4BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA23C708159B91FB009A4BB6 /* Build configuration list for PBXNativeTarget "SubtitleCorrectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA23C709159B91FB009A4BB6 /* Debug */,
+				DA23C70A159B91FB009A4BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA23C6CA159B91FA009A4BB6 /* Project object */;
+}
