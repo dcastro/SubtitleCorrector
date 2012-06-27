@@ -436,6 +436,7 @@
 				DA23C707159B91FB009A4BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA23C708159B91FB009A4BB6 /* Build configuration list for PBXNativeTarget "SubtitleCorrectorTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +445,7 @@
 				DA23C70A159B91FB009A4BB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

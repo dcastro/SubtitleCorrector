@@ -9,7 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+@property (weak) IBOutlet NSPathControl *filePathControl;
 
 @property (assign) IBOutlet NSWindow *window;
+- (IBAction)buttonPressed:(id)sender;
 
 @end
