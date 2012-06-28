@@ -11,6 +11,9 @@
 @implementation AppDelegate
 
 @synthesize filePathControl = _filePathControl;
+@synthesize optionsRadio = _optionsRadio;
+@synthesize secondsTextField = _secondsTextField;
+@synthesize milisecondsTextField = _milisecondsTextField;
 @synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -18,7 +21,7 @@
     // Insert code here to initialize your application
 }
 
-- (IBAction)buttonPressed:(id)sender {
+- (IBAction)chooseFile:(id)sender {
     // Create the File Open Dialog class.
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
     
@@ -45,8 +48,16 @@
         NSURL* path = [openDlg URL];
         [self.filePathControl setURL:path];
         
+        
+        
     }
     
     
 }
+
+- (IBAction)correct:(id)sender {
+}
+
+
+
 @end

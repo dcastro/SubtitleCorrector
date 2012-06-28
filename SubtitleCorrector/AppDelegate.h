@@ -8,10 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSTextFieldDelegate>
 @property (weak) IBOutlet NSPathControl *filePathControl;
-
+@property (weak) IBOutlet NSMatrix *optionsRadio;
+@property (weak) IBOutlet NSTextField *secondsTextField;
+@property (weak) IBOutlet NSTextField *milisecondsTextField;
 @property (assign) IBOutlet NSWindow *window;
-- (IBAction)buttonPressed:(id)sender;
+
+- (IBAction)chooseFile:(id)sender;
+- (IBAction)correct:(id)sender;
 
 @end
