@@ -15,10 +15,12 @@
 @synthesize secondsTextField = _secondsTextField;
 @synthesize milisecondsTextField = _milisecondsTextField;
 @synthesize window = _window;
+@synthesize correctButton = _correctButton;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self.correctButton setEnabled:NO];
 }
 
 - (IBAction)chooseFile:(id)sender {
@@ -33,23 +35,10 @@
     // process the files.
     if ( [openDlg runModal] == NSOKButton )
     {
-        // Get an array containing the full filenames of all
-        // files and directories selected.
-        /*NSArray* files = [openDlg URL];
-        
-        // Loop through all the files and process them.
-        for( i = 0; i < [files count]; i++ )
-        {
-            NSString* fileName = [files objectAtIndex:i];
-            
-            // Do something with the filename.
-        }*/
-        
         NSURL* url = [openDlg URL];
         [self.filePathControl setURL:url];
         
-        
-        
+        [self.correctButton setEnabled:YES];
     }
     
     
@@ -60,7 +49,10 @@
     NSURL* url = [self.filePathControl URL];
     NSMutableArray* corrected = [[NSMutableArray alloc] init];
     
+    //calc time diff
     int msecs = [self.secondsTextField intValue] * 1000 + [self.milisecondsTextField intValue];
+    //NSLog(@"tag: %i", self.optionsRadio.selectedTag);
+    msecs *= self.optionsRadio.selectedTag;
     
     const char *filename;
     filename = [[url path] UTF8String];
@@ -90,18 +82,26 @@
             //correction
             if (numberOfMatches) {
                 
+                //find timestamps within the line
+                
                 NSString* expression = @"[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}";
                 NSError *error = NULL;
                 NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
                 
                 NSArray* matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
                 
+                //NSLog(@"old %@", string );
+                
                 for (NSTextCheckingResult *match in matches) {
                     NSRange matchRange = [match range];
                     NSString* timestamp = [string substringWithRange:matchRange];
                     
-                    [self correctTimestamp:timestamp byMiliseconds:msecs];
+                    //correct timestamp
+                    timestamp = [self correctTimestamp:timestamp byMiliseconds:msecs];
+                    
+                    string = [string stringByReplacingCharactersInRange:matchRange withString:timestamp];
                 }
+                //NSLog(@"new %@", string );
             }
             
             
@@ -130,8 +130,23 @@
     
 }
 
-- (void) correctTimestamp:(NSString*) timestamp byMiliseconds:(int) msecs {
+- (NSString*) correctTimestamp:(NSString*) timestamp byMiliseconds:(int) msecs {
+    //formatter
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm:ss,SSS"];
     
+    //convert to date
+    NSDate* date = [dateFormatter dateFromString:timestamp];
+    
+    //add/sub time
+    NSTimeInterval interval = msecs/1000.0;
+    date = [date dateByAddingTimeInterval:interval];
+    
+    //convert back to string
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    //NSLog(@"old %@ new %@", timestamp, dateString );
+    
+    return dateString;
 }
 
 

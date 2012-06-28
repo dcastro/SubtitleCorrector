@@ -14,6 +14,7 @@
 @property (weak) IBOutlet NSTextField *secondsTextField;
 @property (weak) IBOutlet NSTextField *milisecondsTextField;
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSButton *correctButton;
 
 - (IBAction)chooseFile:(id)sender;
 - (IBAction)correct:(id)sender;
