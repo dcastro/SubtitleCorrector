@@ -113,7 +113,22 @@
         fclose ( file );
     }
     
+    //backup original file
+    if ([sender tag] == 2) {
+        if ( [[NSFileManager defaultManager] isReadableFileAtPath:[url path]] ) {
+            NSString* path = [[url path] stringByAppendingString:@".backup"];
+            NSLog(@"url %@", [url path]);
+            NSLog(@"dest %@", path);
+            NSURL* destination = [NSURL fileURLWithPath:path];
+            
+            NSLog(@"url %@", [url description]);
+            NSLog(@"dest %@", [destination description]);
+            
+            [[NSFileManager defaultManager] copyItemAtURL:url toURL:destination error:nil];
+        }
+    }
     
+    //write correct subtitles to file
     file = fopen ( filename, "w+" );
     if ( file != NULL )
     {
