@@ -56,11 +56,11 @@
 }
 
 - (IBAction)correct:(id)sender {
-    
+
     NSURL* url = [self.filePathControl URL];
     NSMutableArray* corrected = [[NSMutableArray alloc] init];
     
-    //NSFileHandle *file;
+    int msecs = [self.secondsTextField intValue] * 1000 + [self.milisecondsTextField intValue];
     
     const char *filename;
     filename = [[url path] UTF8String];
@@ -80,8 +80,7 @@
             //match line
             NSString* expression = @"[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3} --> [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}";
             NSError *error = NULL;
-            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression                                                                            options:NSRegularExpressionCaseInsensitive
-                                                                                     error:&error];
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
             NSUInteger numberOfMatches = 0;
             if (string != nil)
                 numberOfMatches = [regex numberOfMatchesInString:string
@@ -91,6 +90,18 @@
             //correction
             if (numberOfMatches) {
                 
+                NSString* expression = @"[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}";
+                NSError *error = NULL;
+                NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
+                
+                NSArray* matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+                
+                for (NSTextCheckingResult *match in matches) {
+                    NSRange matchRange = [match range];
+                    NSString* timestamp = [string substringWithRange:matchRange];
+                    
+                    [self correctTimestamp:timestamp byMiliseconds:msecs];
+                }
             }
             
             
@@ -98,12 +109,9 @@
             string = [NSString stringWithFormat:@"%@\n", string];
             [corrected insertObject:string atIndex: [corrected count] ];
             
-            if(numberOfMatches)
-                NSLog(@"line: %@", string);
         }
         fclose ( file );
     }
-    
     
     
     file = fopen ( filename, "w+" );
@@ -119,6 +127,10 @@
         
     }
     
+    
+}
+
+- (void) correctTimestamp:(NSString*) timestamp byMiliseconds:(int) msecs {
     
 }
 
