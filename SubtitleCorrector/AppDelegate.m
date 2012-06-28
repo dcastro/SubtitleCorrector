@@ -45,8 +45,8 @@
             // Do something with the filename.
         }*/
         
-        NSURL* path = [openDlg URL];
-        [self.filePathControl setURL:path];
+        NSURL* url = [openDlg URL];
+        [self.filePathControl setURL:url];
         
         
         
@@ -56,6 +56,70 @@
 }
 
 - (IBAction)correct:(id)sender {
+    
+    NSURL* url = [self.filePathControl URL];
+    NSMutableArray* corrected = [[NSMutableArray alloc] init];
+    
+    //NSFileHandle *file;
+    
+    const char *filename;
+    filename = [[url path] UTF8String];
+    FILE *file = fopen ( filename, "r+" );
+    if ( file != NULL )
+    {
+        char line [ 512 ]; /* or other suitable maximum line size */
+        while ( fgets ( line, sizeof line, file ) != NULL ) /* read a line */
+        {
+            NSString* string = [NSString stringWithUTF8String:line];
+            
+            //remove endline
+            NSCharacterSet* charSet = [NSCharacterSet newlineCharacterSet];
+            string = [[string componentsSeparatedByCharactersInSet: charSet] componentsJoinedByString: @""];
+            
+            
+            //match line
+            NSString* expression = @"[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3} --> [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}";
+            NSError *error = NULL;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression                                                                            options:NSRegularExpressionCaseInsensitive
+                                                                                     error:&error];
+            NSUInteger numberOfMatches = 0;
+            if (string != nil)
+                numberOfMatches = [regex numberOfMatchesInString:string
+                                                                options:0
+                                                                  range:NSMakeRange(0, [string length])];
+            
+            //correction
+            if (numberOfMatches) {
+                
+            }
+            
+            
+            //save line for later
+            string = [NSString stringWithFormat:@"%@\n", string];
+            [corrected insertObject:string atIndex: [corrected count] ];
+            
+            if(numberOfMatches)
+                NSLog(@"line: %@", string);
+        }
+        fclose ( file );
+    }
+    
+    
+    
+    file = fopen ( filename, "w+" );
+    if ( file != NULL )
+    {
+        
+        for (NSString* string in corrected) {
+            fputs([string UTF8String], file);
+        }
+        
+        fclose(file);
+        
+        
+    }
+    
+    
 }
 
 
