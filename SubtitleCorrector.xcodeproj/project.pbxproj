@@ -17,6 +17,7 @@
 		DA23C6F7159B91FB009A4BB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA23C6D7159B91FA009A4BB6 /* Cocoa.framework */; };
 		DA23C6FF159B91FB009A4BB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA23C6FD159B91FB009A4BB6 /* InfoPlist.strings */; };
 		DA23C702159B91FB009A4BB6 /* SubtitleCorrectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA23C701159B91FB009A4BB6 /* SubtitleCorrectorTests.m */; };
+		DA55C327159F1DC700098198 /* DragDropImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA55C326159F1DC700098198 /* DragDropImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		DA23C6FE159B91FB009A4BB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA23C700159B91FB009A4BB6 /* SubtitleCorrectorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubtitleCorrectorTests.h; sourceTree = "<group>"; };
 		DA23C701159B91FB009A4BB6 /* SubtitleCorrectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubtitleCorrectorTests.m; sourceTree = "<group>"; };
+		DA55C325159F1DC700098198 /* DragDropImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropImageView.h; sourceTree = "<group>"; };
+		DA55C326159F1DC700098198 /* DragDropImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 		DA23C6C8159B91FA009A4BB6 = {
 			isa = PBXGroup;
 			children = (
+				DA55C32F159F301500098198 /* Resources */,
 				DA23C6DD159B91FA009A4BB6 /* SubtitleCorrector */,
 				DA23C6FA159B91FB009A4BB6 /* SubtitleCorrectorTests */,
 				DA23C6D6159B91FA009A4BB6 /* Frameworks */,
@@ -116,6 +120,8 @@
 			children = (
 				DA23C6E9159B91FA009A4BB6 /* AppDelegate.h */,
 				DA23C6EA159B91FA009A4BB6 /* AppDelegate.m */,
+				DA55C325159F1DC700098198 /* DragDropImageView.h */,
+				DA55C326159F1DC700098198 /* DragDropImageView.m */,
 				DA23C6EC159B91FB009A4BB6 /* MainMenu.xib */,
 				DA23C6DE159B91FA009A4BB6 /* Supporting Files */,
 			);
@@ -151,6 +157,14 @@
 				DA23C6FD159B91FB009A4BB6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA55C32F159F301500098198 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = SubtitleCorrector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +277,7 @@
 			files = (
 				DA23C6E4159B91FA009A4BB6 /* main.m in Sources */,
 				DA23C6EB159B91FA009A4BB6 /* AppDelegate.m in Sources */,
+				DA55C327159F1DC700098198 /* DragDropImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

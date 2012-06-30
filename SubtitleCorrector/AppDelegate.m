@@ -16,12 +16,16 @@
 @synthesize milisecondsTextField = _milisecondsTextField;
 @synthesize window = _window;
 @synthesize correctButton = _correctButton;
+@synthesize dragDropImg = _dragDropImg;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     [self.filePathControl setEnabled:NO];
     [self.filePathControl addObserver:self forKeyPath:@"URL" options:NSKeyValueObservingOptionNew context:nil];
+    
+    self.dragDropImg.delegate = self;
+    
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -166,6 +170,10 @@
     //NSLog(@"old %@ new %@", timestamp, dateString );
     
     return dateString;
+}
+
+- (void) didDrop:(NSURL *)url {
+    [self.filePathControl setURL:url];
 }
 
 
