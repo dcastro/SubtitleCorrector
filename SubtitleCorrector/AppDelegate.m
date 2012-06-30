@@ -20,7 +20,13 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    [self.correctButton setEnabled:NO];
+    [self.filePathControl setEnabled:NO];
+    [self.filePathControl addObserver:self forKeyPath:@"URL" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    [self.filePathControl setEnabled:YES];
 }
 
 - (IBAction)chooseFile:(id)sender {
@@ -37,8 +43,6 @@
     {
         NSURL* url = [openDlg URL];
         [self.filePathControl setURL:url];
-        
-        [self.correctButton setEnabled:YES];
     }
     
     
