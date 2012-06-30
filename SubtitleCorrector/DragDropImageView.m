@@ -126,7 +126,28 @@ NSString *kPrivateDragUTI = @"com.yourcompany.cocoadraganddrop";
     [self setNeedsDisplay: YES];
     
     //check to see if we can accept the data
-    return YES;
+    
+    NSURL* url;
+    url=[NSURL URLFromPasteboard: [sender draggingPasteboard]];
+
+    //check if it's a directory
+    NSNumber* isDir;
+    [url getResourceValue:&isDir forKey:NSURLIsDirectoryKey error:nil];
+    
+    if ([isDir boolValue])
+        return NO;
+    
+    
+    //check if filename ends in ".srt"
+    NSString* filename = [[url pathComponents] lastObject];
+    NSString* ext = [filename substringFromIndex:([filename length] -4 )];
+    
+    if ([ext isEqualToString:@".srt"]) {
+        return YES;
+    }
+    
+    
+    return NO;
     //return [NSImage canInitWithPasteboard: [sender draggingPasteboard]];
 } 
 
